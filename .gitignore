@@ -11,7 +11,7 @@ __pycache__/
 *.so
 
 # docs file
-# telegrambot/docs/_build
+# backend/docs/_build
 
 # Distribution / packaging
 .Python
@@ -136,22 +136,25 @@ dmypy.json
 # Pyre type checker
 .pyre/
 test_api.py
-telegrambot/makeload
-telegrambot/makeload.exe
-telegrambot/docs
+backend/makeload
+backend/makeload.exe
+backend/docs
 docs/
 media/
 backup/
 dump/devices1.json
 dump/devices3.json
 dump/devices.json
-telegrambot/media/firmware-cache
-telegrambot/media/firmware_import
-telegrambot/media/firmware
-telegrambot/media/bootloader_import
-telegrambot/media/bootloader
-telegrambot/media/
-telegrambot/media/log/django/general.log
+backend/media/firmware-cache
+backend/media/firmware_import
+backend/media/firmware
+backend/media/bootloader_import
+backend/media/bootloader
+backend/media/
+backend/media/log/django/general.log
 dump
-telegrambot/core/__pycache__/__init__.cpython-39.pyc
-telegrambot/nginx.conf
+backend/core/__pycache__/__init__.cpython-39.pyc
+backend/nginx.conf
+telegrambot/mycert.crt
+.gitignore
+telegrambot/mykey.key

@@ -1,4 +1,4 @@
-"""telegrambot URL Configuration
+"""backend URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -15,8 +15,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
+from backend.views import TelegramBotWebhookView
+
+
+def healthcheck(request):
+    # raise KeyError
+    return HttpResponse("0", status=200)
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include("main.urls")),
+    path('live/healthcheck/', healthcheck),
+    path(
+        'supersecterwebhook/',
+        csrf_exempt(TelegramBotWebhookView.as_view())
+    ),
 ]

@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.admin import ModelAdmin
-from main.models import Person
+from users.models import Person
 
 
 @admin.register(Person)
@@ -14,12 +14,10 @@ class PersonAdmin(ModelAdmin):
         "language_code",
         "link",
         "name",
-        "user",
         "tg_id",
     )
 
     readonly_fields = (
-        "user",
         "username",
         "first_name",
         "last_name",
