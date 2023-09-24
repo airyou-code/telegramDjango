@@ -1,10 +1,7 @@
 """
     Telegram event handlers
 """
-from telegram.ext import (
-    Dispatcher,
-    CommandHandler,
-)
+from telegram.ext import Updater, CommandHandler
 
 from backend.settings import DEBUG
 # from bot.handlers.admin import handlers as admin_handlers
@@ -21,10 +18,7 @@ def setup_dispatcher(dp):
 
     return dp
 
-
-n_workers = 0 if DEBUG else 4
-dispatcher = setup_dispatcher(
-    Dispatcher(
-        bot, update_queue=None, workers=n_workers, use_context=True
-    )
-)
+# n_workers = 0 if DEBUG else 4
+# dispatcher = setup_dispatcher(
+#     Updater(bot.token, use_context=True)
+# )

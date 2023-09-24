@@ -1,14 +1,10 @@
 from django.utils.translation import gettext_lazy as _
-from django.contrib.auth.models import (
-    User
-)
 from django.contrib.auth.validators import UnicodeUsernameValidator
 from core.models import CreateUpdateTracker
 from django.db import models
 
 from telegram import Update
 from telegram.ext import CallbackContext
-
 
 
 class Person(CreateUpdateTracker):
